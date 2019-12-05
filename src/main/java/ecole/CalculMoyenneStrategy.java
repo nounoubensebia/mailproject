@@ -1,5 +1,5 @@
 package ecole;
 
 public interface CalculMoyenneStrategy {
-    public float CalculerMoyenne(float td, float tp, float examen);
+    public float calculerMoyenne(float td, float tp, float examen);
 }

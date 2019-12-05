@@ -7,18 +7,21 @@ import org.junit.Assert;
 
 public class CalculerMoyenneStepsDefs {
 
+    Etudiant etudiant;
     Cours cours;
     float moyenne;
 
     @Given("un etudiant Dupont qui a fini  un cours de Geometrie on lui attribut trois notes tp={int},  td={int}, ex={int}")
     public void un_etudiant_Dupont_qui_a_fini_un_cours_de_Geometrie_on_lui_attribut_trois_notes_tp_td_ex(Integer int1, Integer int2, Integer int3) {
         // Write code here that turns the phrase above into concrete actions
+        etudiant = new Etudiant("Dupont");
         Cours.Builder builder = new Cours.Builder("Geometrie",20);
         builder.withNoteTp(int1);
         builder.withNoteTd(int2);
         builder.withNoteExam(int3);
         builder.withCalculMoyenneStrategy(new MoyenneMath());
         cours = builder.build();
+        etudiant.addCours(cours);
     }
 
     @When("on calcule la moyenne  de ses trois notes")

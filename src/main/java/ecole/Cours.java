@@ -119,7 +119,7 @@ public class Cours {
 
     public float calculerMoyenne ()
     {
-        return calculMoyenneStrategy.CalculerMoyenne(noteTd,noteTp,noteExamen);
+        return calculMoyenneStrategy.calculerMoyenne(noteTd,noteTp,noteExamen);
     }
 
     public float getNoteTd() {
