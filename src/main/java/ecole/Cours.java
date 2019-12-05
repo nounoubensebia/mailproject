@@ -18,6 +18,18 @@ public class Cours {
         return this.nomCours;
     }
 
+    public void setNomCours(String nomCours) {
+        this.nomCours = nomCours;
+    }
+
+    public int getVolumeHoraireMax() {
+        return volumeHoraireMax;
+    }
+
+    public void setVolumeHoraireMax(int volumeHoraireMax) {
+        this.volumeHoraireMax = volumeHoraireMax;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Cours)

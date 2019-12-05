@@ -1,17 +1,21 @@
 package point;
 
-public class Point {
+import ecole.Chapitre;
+
+public class Point extends Chapitre {
     private float x;
     private float y;
 
-    public Point()
+    public Point(String nomCh,int volumeHorraire)
     {
         // initialisation des variables d'instance
+        super(nomCh,volumeHorraire);
         x = 0;
         y = 0;
     }
 
-    public Point(float x, float y) {
+    public Point(String nomCh, int volumeHorraire,float x, float y) {
+        super(nomCh,volumeHorraire);
         this.x = x;
         this.y = y;
     }
