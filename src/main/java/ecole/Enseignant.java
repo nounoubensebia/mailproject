@@ -15,6 +15,8 @@ public class Enseignant {
         this.ecole=ecole;
     }
 
+
+
     public double augmentationFinAnnee() {
         if (this.salaire < 3000){
             return this.salaire*1.05;
