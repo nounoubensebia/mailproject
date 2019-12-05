@@ -1,3 +1,5 @@
+package point;
+
 import java.util.List;
 
 public class Courbe {

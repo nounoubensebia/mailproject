@@ -1,9 +1,11 @@
+package point;
+
 public class Cercle {
     private Point p;
     private float r;
 
     /**
-     * Constructeur d'objets de classe Cercle
+     * Constructeur d'objets de classe point.Cercle
      */
     public Cercle()
     {
