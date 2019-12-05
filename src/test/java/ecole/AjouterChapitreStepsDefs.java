@@ -20,7 +20,9 @@ public class AjouterChapitreStepsDefs {
         ArrayList<Chapitre> chapitres = new ArrayList<Chapitre>();
         chapitres.add(new Chapitre("ch1",10));
         chapitres.add(new Chapitre("ch2",14));
-        c1 = new Cours("Geometrie",34,chapitres);
+        c1 = new Cours.Builder("Geometrie",34).build();
+        c1.addChapitre(chapitres.get(0));
+        c1.addChapitre(chapitres.get(1));
         ch1 = new Point();
     }
 
@@ -50,7 +52,9 @@ public class AjouterChapitreStepsDefs {
         ArrayList<Chapitre> chapitres = new ArrayList<Chapitre>();
         chapitres.add(new Chapitre("ch1",10));
         chapitres.add(new Chapitre("ch2",14));
-        c1 = new Cours("Algebre",24,chapitres);
+        c1 = new Cours.Builder("Algebre",24).build();
+        c1.addChapitre(chapitres.get(0));
+        c1.addChapitre(chapitres.get(1));
         ch1 = new Point();
     }
 
@@ -70,7 +74,7 @@ public class AjouterChapitreStepsDefs {
                 b = true;
         }
 
-        Assert.assertFalse(b);
+        Assert.assertTrue(b);
     }
 
 }

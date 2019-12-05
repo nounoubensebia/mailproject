@@ -29,7 +29,7 @@ public class CoursTest {
     }
     @Test
     public void testAjouterChapitre(){
-        Cours cours = new Cours("Test",20);
+        Cours cours = new Cours.Builder("Test",20).build();
         Chapitre ch0 = new Chapitre("ch0",19);
         cours.addChapitre(ch0);
         List<Chapitre> chapitres = cours.getChapitres();
@@ -46,7 +46,6 @@ public class CoursTest {
         assertEquals(1,chapitres.size());
     }
 
-    private void assertFalse(boolean inList) {
-    }
+
 
 }

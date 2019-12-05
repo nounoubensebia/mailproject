@@ -19,7 +19,7 @@ public class AjouterCoursAEnseignantStepsDefs {
         e1 = new Enseignant("Dupont","Dupont",
                 2000,Ecole.getInstance(),listCours,
                 3);
-        c1 = new Cours("Point", 20);
+        c1 = new Cours.Builder("Point",20).build();
     }
 
     @When("le nombre de cours en ajoutant le nouveau cours ne depasse pas le nombre maximal de cours")
@@ -46,11 +46,12 @@ public class AjouterCoursAEnseignantStepsDefs {
     @Given("notre Enseignant avec un nombre de cours et avec un nombre maximal de cours qui est deja atteint")
     public void notreEnseignantAvecUnNombreDeCoursEtAvecUnNombreMaximalDeCoursQuiEstDejaAtteint() {
         ArrayList<Cours> listCours = new ArrayList<Cours>();
-        listCours.add(new Cours("cours1", 20));
+        Cours coursToAdd = new Cours.Builder("cours1",20).build();
+        listCours.add(coursToAdd);
         e1 = new Enseignant("Dupont","Dupont",
                 2000,Ecole.getInstance(),listCours,
                 1);
-        c1 = new Cours("cours2", 20);
+        c1 = new Cours.Builder("cours2", 20).build();
     }
 
     @When("le nombre de cours en ajoutant le nouveau cours depasse le nombre maximal de cours")

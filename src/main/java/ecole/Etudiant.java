@@ -1,36 +1,29 @@
 package ecole;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class Etudiant {
 
-    private static Etudiant instance;
+    private int matricule;
     private String nomEtudiant;
-    static float noteCours;
-    static float noteTd;
-    static float noteTp;
-    private Cours cours;
-    private Etudiant()
-    {
+    private List<Cours> listCours;
 
+    public Etudiant(String nomEtudiant) {
+        this.nomEtudiant = nomEtudiant;
+        this.listCours = new LinkedList<Cours>();
     }
 
-    public Etudiant getInstance()
+    public void addCours(Cours cours)
     {
-
-        if (instance==null)
-        {
-            instance = new Etudiant();
-        }
-        return instance;
-    }
-
-    private Etudiant(String nomEtudiant, Cours cours)
-    {
-        this.nomEtudiant=nomEtudiant;
-        this.cours=cours;
+        listCours.add(cours);
     }
 
     public String getNomCours(){
         return this.nomEtudiant;
     }
 
+    public List<Cours> getListCours() {
+        return new LinkedList<Cours>(listCours);
+    }
 }
