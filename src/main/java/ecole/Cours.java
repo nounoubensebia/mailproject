@@ -50,13 +50,13 @@ public class Cours {
     public List<Chapitre> getChapitres() {
         return new ArrayList<Chapitre>(chapitres);
     }
-    public boolean addChapitre(Chapitre ch) {
+    public void addChapitre(Chapitre ch) {
         int horaireMax = 0;
         for (Chapitre chapitre : chapitres) {
             horaireMax += chapitre.getVolumeHoraire();
         }
         if (horaireMax < this.volumeHoraireMax) {
-            return chapitres.add(ch);
+            chapitres.add(ch);
         }
 
     }
