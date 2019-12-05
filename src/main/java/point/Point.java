@@ -6,15 +6,21 @@ public class Point extends Chapitre {
     private float x;
     private float y;
 
-    public Point(String nomCh,int volumeHorraire)
+    public Point()
     {
         // initialisation des variables d'instance
-        super(nomCh,volumeHorraire);
+        super("Point",4);
         x = 0;
         y = 0;
     }
 
-    public Point(String nomCh, int volumeHorraire,float x, float y) {
+    public Point(float x, float y) {
+        super("Point",4);
+        this.x = x;
+        this.y = y;
+    }
+
+    public Point(String nomCh, int volumeHorraire, float x, float y) {
         super(nomCh,volumeHorraire);
         this.x = x;
         this.y = y;
