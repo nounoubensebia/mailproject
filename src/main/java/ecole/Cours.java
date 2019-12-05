@@ -6,7 +6,7 @@ public class Cours {
     private String nomCours;
     static float noteCours;
     static float noteTd;
-    static float noteTp;
+
     private Cours()
     {
 
