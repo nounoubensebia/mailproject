@@ -10,9 +10,9 @@ public class SalaireNoIncreaseStepsDefs {
     @Given("un Enseignant avec un {int} eleve  dans une ecole")
     public void un_Enseignant_avec_un_eleve_dans_une_ecole(Integer int1) {
         DirecteurEcole dir = new DirecteurEcole("Dir");
-        Ecole ecole = new Ecole("ecole",dir);
-        enseignant = new Enseignant("Sab", "Maya",3100,ecole);
-        enseignant2 = new Enseignant("Sab", "Maya",3500,ecole);
+        Ecole ecole = Ecole.getInstance();
+        enseignant = new Enseignant("Sab", "Maya",3100,Ecole.getInstance(),null,1);
+        enseignant2 = new Enseignant("Sab", "Maya",3500,Ecole.getInstance(),null,1);
     }
 
     @When("a la fin d annee  on doit verifier qu il y a pas d augmentation")

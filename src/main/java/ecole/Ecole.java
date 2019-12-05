@@ -15,7 +15,7 @@ public class Ecole {
 
     }
 
-    public Ecole getInstance()
+    public static Ecole getInstance()
     {
         if (instance==null)
         {
