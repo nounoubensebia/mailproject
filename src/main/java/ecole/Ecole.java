@@ -10,7 +10,7 @@ public class Ecole {
     private DirecteurEcole directeur;
     List<Enseignant> enseignants;
 
-    private Ecole()
+    Ecole()
     {
 
     }
