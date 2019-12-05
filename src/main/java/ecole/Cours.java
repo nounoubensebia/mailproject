@@ -1,8 +1,14 @@
 package ecole;
 
+import java.util.List;
+
 public class Cours {
 
     private String nomCours;
+    private int volumeHoraireMax;
+
+
+
 
     public Cours(String nomCours) {
         this.nomCours = nomCours;
@@ -21,4 +27,5 @@ public class Cours {
         }
         return false;
     }
+
 }
