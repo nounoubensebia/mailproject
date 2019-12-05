@@ -13,4 +13,7 @@ public class Chapitre {
     public String getNomChapitre(){
         return this.getNomChapitre();
     }
-}
+    public int getVolumeHoraire() {
+        return volumeHoraire;
+    }
+  }
