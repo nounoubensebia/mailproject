@@ -3,15 +3,30 @@ package ecole;
 import java.util.List;
 
 public class Ecole {
-    private static int idEcole=0;
+
+    private static Ecole instance;
+
     private String nomEcole;
     private DirecteurEcole directeur;
-    List<Enseignant> enseignant;
+    List<Enseignant> enseignants;
 
-    public Ecole(String nomEcole, DirecteurEcole directeur)
+    private Ecole()
+    {
+
+    }
+
+    public Ecole getInstance()
+    {
+        if (instance==null)
+        {
+            instance = new Ecole("Dauphine",new DirecteurEcole("Dupont"));
+        }
+        return instance;
+    }
+
+    private Ecole(String nomEcole, DirecteurEcole directeur)
     {
         this.directeur=directeur;
-        idEcole++;
         this.nomEcole=nomEcole;
     }
 
