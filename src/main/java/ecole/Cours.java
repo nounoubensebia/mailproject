@@ -4,8 +4,7 @@ public class Cours {
 
     private static Cours instance;
     private String nomCours;
-    static float noteCours;
-    static float noteTd;
+
 
     private Cours()
     {
