@@ -11,7 +11,7 @@ public class Cours {
 
 
 
-    public Cours(String nomCours) {
+    public Cours(String nomCours, int i) {
         this.nomCours = nomCours;
     }
 
