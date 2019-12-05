@@ -1,17 +1,24 @@
 package ecole;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cours {
 
     private String nomCours;
     private int volumeHoraireMax;
-
+    private List<Chapitre> chapitres;
 
 
 
     public Cours(String nomCours) {
         this.nomCours = nomCours;
+    }
+
+    public Cours(String nomCours, int volumeHoraireMax, List<Chapitre> chapitres) {
+        this.nomCours = nomCours;
+        this.volumeHoraireMax = volumeHoraireMax;
+        this.chapitres = chapitres;
     }
 
     public String getNomCours(){
@@ -40,4 +47,7 @@ public class Cours {
         return false;
     }
 
+    public List<Chapitre> getChapitres() {
+        return new ArrayList<Chapitre>(chapitres);
+    }
 }
