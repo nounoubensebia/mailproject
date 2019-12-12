@@ -4,8 +4,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
-import point.Cercle;
-import point.Point;
 
 public class DeplacerStepsDefs {
 
@@ -26,8 +24,8 @@ public class DeplacerStepsDefs {
     @Then("Le centre du cercle deplace {double} {double} doit etre calcule")
     public void le_centre_du_cercle_deplace_doit_etre_calcule(Double double1, Double double2) {
         // Write code here that turns the phrase above into concrete actions
-        Assert.assertEquals(double1.floatValue(),c.getP().getX(),0.00001);
-        Assert.assertEquals(double2.floatValue(),c.getP().getY(),0.00001);
+        Assert.assertEquals(double1.floatValue(),c.getCentre().getX(),0.00001);
+        Assert.assertEquals(double2.floatValue(),c.getCentre().getY(),0.00001);
     }
 
 }

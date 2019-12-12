@@ -1,7 +1,9 @@
 package point;
 
-public class Cercle {
-    private Point p;
+import ecole.Chapitre;
+
+public class Cercle extends Chapitre {
+    private Point centre;
     private float r;
 
     /**
@@ -9,21 +11,35 @@ public class Cercle {
      */
     public Cercle()
     {
+        super("Cercle",20);
         // initialisation des variables d'instance
-        p = new Point();
+        centre = new Point();
         r = 1;
     }
 
-    public Point getP() {
-        return p;
+    public Point getCentre() {
+        return centre;
     }
 
     public Cercle(Point p, float r) {
-        this.p = p;
+        super("Cercle",20);
+        this.centre = p;
         this.r = r;
     }
 
+    public void setCentre (Point centre)
+    {
+        this.centre = centre;
+    }
+
     public void deplacerCercle (float deplacementX, float deplacementY) {
-        p.deplacerPoint(deplacementX,deplacementY);
+        centre.deplacerPoint(deplacementX,deplacementY);
+    }
+
+    public int getNoteInterrogation (Point ancienCentre,float deplacementX, float deplacementY) {
+        if (ancienCentre.getX()+deplacementX==centre.getX() && ancienCentre.getY()+deplacementY==centre.getY())
+            return 20;
+        else
+            return 0;
     }
 }
